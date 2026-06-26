@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ══════════════════════════════════════════
+   DARK MODE (default)
+   ══════════════════════════════════════════ */
+:root {
+  /* Brand palette */
+  --arctic-powder:  #F1F6F4;
+  --forsythia:      #FFC801;
+  --nocturnal:      #114C5A;
+  --mystic-mint:    #D9E8E2;
+  --deep-saffron:   #FF9932;
+  --oceanic-noir:   #172B36;
+
+  /* Dark semantic */
+  --bg-primary:     #0f1f28;
+  --bg-secondary:   #172B36;
+  --bg-card:        #1a303d;
+  --bg-card-hover:  #1f3a4d;
+  --bg-nav:         rgba(15,31,40,0.88);
+  --text-primary:   #F1F6F4;
+  --text-secondary: #D9E8E2;
+  --text-muted:     #7a9aaa;
+  --accent-primary: #FFC801;
+  --accent-secondary:#FF9932;
+  --accent-teal:    #114C5A;
+  --border-color:   rgba(209,232,226,0.10);
+  --border-accent:  rgba(255,200,1,0.28);
+  --shadow-card:    0 4px 28px rgba(0,0,0,0.35);
+  --shadow-glow:    0 0 40px rgba(255,200,1,0.10);
+  --shadow-teal:    0 0 40px rgba(17,76,90,0.4);
+  --scrollbar-thumb:#1f3a4d;
+
+  /* Fonts */
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Type scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Layout */
+  --container-max:     1200px;
+  --container-padding: var(--space-6);
+  --section-padding:   var(--space-24);
+  --border-radius-sm:  8px;
+  --border-radius-md:  12px;
+  --border-radius-lg:  20px;
+  --border-radius-xl:  28px;
+
+  /* Motion — matching spec: micro 150-200ms, layout 300-400ms */
+  --ease-out:    cubic-bezier(0.16,1,0.3,1);
+  --ease-in-out: cubic-bezier(0.65,0,0.35,1);
+  --duration-micro:  150ms;
+  --duration-fast:   200ms;
+  --duration-layout: 350ms;
+}
+
+/* ══════════════════════════════════════════
+   LIGHT MODE
+   ══════════════════════════════════════════ */
+[data-theme="light"] {
+  --bg-primary:     #f7f9fb;
+  --bg-secondary:   #eef3f6;
+  --bg-card:        #ffffff;
+  --bg-card-hover:  #f3f8fb;
+  --bg-nav:         rgba(247,249,251,0.92);
+  --text-primary:   #0f1f28;
+  --text-secondary: #2a4a58;
+  --text-muted:     #5a7a8a;
+  --border-color:   rgba(17,76,90,0.12);
+  --border-accent:  rgba(255,200,1,0.45);
+  --shadow-card:    0 4px 28px rgba(17,76,90,0.09);
+  --shadow-glow:    0 0 40px rgba(255,200,1,0.15);
+  --scrollbar-thumb:#c8dde6;
+  --nocturnal:      #114C5A;
+}
+
+/* ══════════════════════════════════════════
+   REDUCED MOTION
+   ══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ══════════════════════════════════════════
+   SCROLLBAR
+   ══════════════════════════════════════════ */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb); border-radius: 3px; }
