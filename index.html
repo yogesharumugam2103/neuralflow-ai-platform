@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary SEO ── -->
+  <title>NeuralFlow — AI-Driven Data Automation Platform</title>
+  <meta name="description" content="NeuralFlow automates your entire data pipeline with AI. Extract, transform, and deploy insights 10x faster with zero-code configuration and 200+ connectors." />
+  <meta name="keywords" content="AI automation, data pipeline, machine learning, no-code, data platform, ETL, data orchestration" />
+  <meta name="author" content="NeuralFlow Inc." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://neuralflow.ai/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://neuralflow.ai/" />
+  <meta property="og:title"       content="NeuralFlow — AI-Driven Data Automation Platform" />
+  <meta property="og:description" content="Automate your entire data pipeline with AI. Extract, transform, and deploy insights 10x faster. No code required." />
+  <meta property="og:image"       content="https://neuralflow.ai/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name"   content="NeuralFlow" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@neuralflow" />
+  <meta name="twitter:creator"     content="@neuralflow" />
+  <meta name="twitter:title"       content="NeuralFlow — AI-Driven Data Automation Platform" />
+  <meta name="twitter:description" content="Automate your entire data pipeline with AI. 10x faster insights. No code required." />
+  <meta name="twitter:image"       content="https://neuralflow.ai/og-image.png" />
+
+  <!-- ── Structured Data (JSON-LD) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NeuralFlow",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "AI-driven data automation platform that extracts, transforms, and deploys insights 10x faster.",
+    "url": "https://neuralflow.ai/",
+    "offers": [
+      { "@type": "Offer", "name": "Starter", "price": "12", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Pro",     "price": "36", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Enterprise","price":"99", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
+
+  <!-- ── Theme init (prevents FOUC) ── -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('nf-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- ── Preconnect for fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" />
+
+  <!-- ── Stylesheets ── -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       MOBILE NAV DRAWER
+       ════════════════════════════════════════ -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <a href="#features" aria-label="Jump to Features section">Features</a>
+    <a href="#pricing"  aria-label="Jump to Pricing section">Pricing</a>
+    <a href="#social-proof" aria-label="Jump to Customers section">Customers</a>
+    <a href="#pricing"  aria-label="View documentation">Docs</a>
+    <a href="#pricing" class="btn btn-primary" style="margin-top:1rem; justify-content:center;">Start free →</a>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       HEADER / NAV
+       ════════════════════════════════════════ -->
+  <header role="banner">
+    <div class="container">
+      <nav aria-label="Primary navigation">
+
+        <a href="" class="nav-logo" aria-label="NeuralFlow home">
+          <span class="nav-logo-dot" aria-hidden="true"></span>
+          NeuralFlow
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#features" aria-label="Go to Features">Features</a></li>
+          <li><a href="#pricing"  aria-label="Go to Pricing">Pricing</a></li>
+          <li><a href="#social-proof" aria-label="Go to Customer stories">Customers</a></li>
+          <li><a href="#pricing"  aria-label="Go to Documentation">Docs</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Dark / Light toggle -->
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Switch to light mode"
+            title="Toggle theme"
+          >
+            <!-- Moon (shown in dark mode) -->
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/>
+            </svg>
+            <!-- Sun (shown in light mode) -->
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+          </button>
+
+          <a href="#pricing" class="btn btn-outline">Sign in</a>
+          <a href="#pricing" class="btn btn-primary">Start free</a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            id="nav-hamburger"
+            class="nav-hamburger"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ────────────────────────────────────
+         HERO
+         ──────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: Content -->
+          <div class="hero-content">
+            <div class="hero-badge entry-animate">
+              <span class="badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                Now in public beta — v2.4 live
+              </span>
+            </div>
+
+            <h1 id="hero-heading" class="hero-title entry-animate">
+              Automate
+              <span class="line-accent">Every Data</span>
+              <span class="line-outline">Pipeline.</span>
+            </h1>
+
+            <p class="hero-description entry-animate">
+              NeuralFlow connects, transforms, and deploys your entire data stack using AI — replacing weeks of engineering work with minutes of configuration.
+            </p>
+
+            <div class="hero-actions entry-animate">
+              <a href="#pricing" class="btn btn-primary">
+                Start for free
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#features" class="btn btn-outline">See how it works</a>
+            </div>
+
+            <div class="hero-stats entry-animate" aria-label="Platform statistics">
+              <div class="stat-item">
+                <div class="stat-value">10×</div>
+                <div class="stat-label">Faster pipelines</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">99.9%</div>
+                <div class="stat-label">Uptime SLA</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">4.2k+</div>
+                <div class="stat-label">Teams using it</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual card -->
+          <div class="hero-visual" aria-hidden="true">
+            <!-- Floating chips -->
+            <div class="hero-chip chip-1">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Pipeline active
+            </div>
+            <div class="hero-chip chip-2">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83"/></svg>
+              AI model running
+            </div>
+            <div class="hero-chip chip-3">
+              ↑ 94% accuracy
+            </div>
+
+            <!-- Main card -->
+            <article class="hero-card entry-animate">
+              <div class="card-header">
+                <div class="card-title-group">
+                  <div class="card-label">Throughput Today</div>
+                  <div class="card-value">2.4M</div>
+                </div>
+                <div class="card-badge">Live</div>
+              </div>
+
+              <!-- Chart bars -->
+              <div class="card-chart" role="img" aria-label="Throughput bar chart showing increasing trend">
+                <div class="chart-bar" style="height:35%"></div>
+                <div class="chart-bar" style="height:55%"></div>
+                <div class="chart-bar" style="height:45%"></div>
+                <div class="chart-bar active" style="height:75%"></div>
+                <div class="chart-bar" style="height:60%"></div>
+                <div class="chart-bar active" style="height:85%"></div>
+                <div class="chart-bar" style="height:70%"></div>
+                <div class="chart-bar active" style="height:90%"></div>
+              </div>
+
+              <div class="card-metrics">
+                <div class="metric">
+                  <div class="metric-label">Latency</div>
+                  <div class="metric-value accent">12ms</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Success rate</div>
+                  <div class="metric-value up">99.97%</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Records/sec</div>
+                  <div class="metric-value">48,200</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Pipelines</div>
+                  <div class="metric-value accent">142</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /hero-inner -->
+
+        <!-- Trusted by -->
+        <div class="logos-section reveal">
+          <p class="logos-label">Trusted by engineering teams at</p>
+          <div class="logos-strip" role="list" aria-label="Companies using NeuralFlow">
+            <span class="logo-item" role="listitem">Stripe</span>
+            <span class="logo-item" role="listitem">Notion</span>
+            <span class="logo-item" role="listitem">Figma</span>
+            <span class="logo-item" role="listitem">Linear</span>
+            <span class="logo-item" role="listitem">Vercel</span>
+            <span class="logo-item" role="listitem">Supabase</span>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+
+    <!-- ────────────────────────────────────
+         FEATURES — Bento ↔ Accordion (Feature 2)
+         ──────────────────────────────────── -->
+    <section id="features" aria-labelledby="features-heading">
+      <div class="container">
+
+        <header class="features-header reveal">
+          <p class="eyebrow">Platform features</p>
+          <h2 id="features-heading" class="section-heading">
+            Built for teams who move<br><span>fast with data.</span>
+          </h2>
+          <p class="section-subtext">
+            Six core capabilities working together — from raw ingestion to production-ready insights, fully automated.
+          </p>
+        </header>
+
+        <!-- ── BENTO GRID (desktop ≥ 768px) ── -->
+        <div class="bento-grid reveal" role="list" aria-label="Platform features grid">
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="0" aria-label="AI Pipeline Orchestration feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
+            </div>
+            <h3 class="bento-title">AI Pipeline Orchestration</h3>
+            <p class="bento-desc">Describe your data workflow in plain language. NeuralFlow's AI builds, schedules, and monitors every step — handling edge cases you haven't thought of yet.</p>
+            <div class="bento-extra" aria-label="Feature tags">
+              <span class="bento-tag">Natural language config</span>
+              <span class="bento-tag">Auto-retry logic</span>
+              <span class="bento-tag">Smart scheduling</span>
+            </div>
+          </article>
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="1" aria-label="Zero-Config Connectors feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z"/><path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/></svg>
+            </div>
+            <h3 class="bento-title">Zero-Config Connectors</h3>
+            <p class="bento-desc">200+ pre-built connectors to every data source you use. OAuth in one click. Schema detection is automatic and keeps up with schema drift.</p>
+          </article>
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="2" aria-label="Real-time Analytics feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941"/></svg>
+            </div>
+            <h3 class="bento-title">Real-time Analytics</h3>
+            <p class="bento-desc">Millisecond-latency query execution on live streaming data. Dashboards that update as events arrive — no batch delays.</p>
+          </article>
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="3" aria-label="Semantic Data Search feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+            </div>
+            <h3 class="bento-title">Semantic Data Search</h3>
+            <p class="bento-desc">Query your entire data warehouse in plain English. AI translates intent into optimised SQL instantly.</p>
+          </article>
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="4" aria-label="Bi-directional Sync feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+            </div>
+            <h3 class="bento-title">Bi-directional Sync</h3>
+            <p class="bento-desc">Keep every system in sync with conflict-free CRDT-based replication. Changes propagate in under 50ms.</p>
+          </article>
+
+          <article class="bento-card" role="listitem" tabindex="0" data-index="5" aria-label="API-first Architecture feature">
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
+            </div>
+            <div class="bento-text">
+              <h3 class="bento-title">API-first Architecture</h3>
+              <p class="bento-desc">Every feature is available via REST and GraphQL. Build custom workflows, embed in your product, or extend with webhooks.</p>
+            </div>
+            <span class="bento-cta" aria-label="Explore API documentation">
+              Explore API docs
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </article>
+
+        </div><!-- /bento-grid -->
+
+
+        <!-- ── ACCORDION LIST (mobile < 768px) ── -->
+        <div class="accordion-list reveal" role="list" aria-label="Platform features list" id="features-accordion">
+
+          <div class="accordion-item" role="listitem" data-index="0" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-0" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
+              </span>
+              <span class="accordion-trigger-label">AI Pipeline Orchestration</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-0" role="region" aria-labelledby="acc-trigger-0">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  Describe your data workflow in plain language. NeuralFlow's AI builds, schedules, and monitors every step — handling edge cases you haven't thought of yet.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem" data-index="1" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-1" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z"/><path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/></svg>
+              </span>
+              <span class="accordion-trigger-label">Zero-Config Connectors</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-1" role="region">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  200+ pre-built connectors to every data source you use. OAuth in one click. Schema detection is fully automatic.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem" data-index="2" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-2" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941"/></svg>
+              </span>
+              <span class="accordion-trigger-label">Real-time Analytics</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-2" role="region">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  Millisecond-latency query execution on live streaming data. Dashboards that update as events arrive.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem" data-index="3" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-3" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+              </span>
+              <span class="accordion-trigger-label">Semantic Data Search</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-3" role="region">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  Query your entire data warehouse in plain English. AI translates intent into optimised SQL instantly.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem" data-index="4" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-4" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+              </span>
+              <span class="accordion-trigger-label">Bi-directional Sync</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-4" role="region">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  Keep every system in sync with conflict-free CRDT-based replication. Changes propagate in under 50ms.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem" data-index="5" aria-expanded="false">
+            <button class="accordion-trigger" aria-controls="acc-panel-5" aria-expanded="false" type="button">
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
+              </span>
+              <span class="accordion-trigger-label">API-first Architecture</span>
+              <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-5" role="region">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  Every feature is available via REST and GraphQL. Build custom workflows, embed in your product, or extend with webhooks.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /accordion-list -->
+      </div><!-- /container -->
+    </section>
+
+
+    <!-- ────────────────────────────────────
+         PRICING — Feature 1: Matrix + Currency Switcher
+         ──────────────────────────────────── -->
+    <section id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+
+        <header class="pricing-header reveal">
+          <p class="eyebrow">Simple pricing</p>
+          <h2 id="pricing-heading" class="section-heading">
+            One plan for every<br><span>stage of growth.</span>
+          </h2>
+          <p class="section-subtext">No hidden fees. Cancel anytime. Upgrade or downgrade as your team scales.</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="pricing-controls reveal" role="group" aria-label="Pricing controls">
+
+          <!-- Billing toggle -->
+          <div class="billing-toggle-wrap">
+            <span class="billing-label active" id="label-monthly" role="button" tabindex="0" aria-label="Switch to monthly billing">Monthly</span>
+
+            <div class="toggle-track"
+                 id="billing-toggle"
+                 role="switch"
+                 aria-checked="false"
+                 aria-label="Toggle annual billing"
+                 tabindex="0">
+              <div class="toggle-thumb" aria-hidden="true"></div>
+            </div>
+
+            <span class="billing-label" id="label-annual" role="button" tabindex="0" aria-label="Switch to annual billing">
+              Annual <span class="save-badge">Save 20%</span>
+            </span>
+          </div>
+
+          <!-- Currency selector -->
+          <div class="currency-select-wrap">
+            <label for="currency-select" class="visually-hidden">Select currency</label>
+            <select id="currency-select" class="currency-select" aria-label="Select pricing currency">
+              <option value="USD">$ USD</option>
+              <option value="INR">₹ INR</option>
+              <option value="EUR">€ EUR</option>
+            </select>
+            <svg class="currency-chevron" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+
+        </div><!-- /pricing-controls -->
+
+        <!-- Pricing cards -->
+        <div class="pricing-grid reveal">
+
+          <!-- Starter -->
+          <article class="pricing-card" aria-labelledby="tier-starter">
+            <div class="tier-name" id="tier-starter">Starter</div>
+
+            <div class="price-block">
+              <div class="price-row">
+                <span class="price-symbol" data-price-symbol="starter" aria-hidden="true">$</span>
+                <span class="price-amount" data-price-amount="starter" aria-live="polite" aria-label="Monthly price">12</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <div class="price-annual-note" data-price-note="starter" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <p class="tier-desc">Perfect for solo builders and small projects getting started with automation.</p>
+            <div class="pricing-divider" aria-hidden="true"></div>
+
+            <ul class="feature-list" aria-label="Starter plan features">
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                5 active pipelines
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                500K records/month
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                20+ connectors
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Community support
+              </li>
+            </ul>
+
+            <a href="#" class="btn pricing-cta" aria-label="Get started with Starter plan">Get started</a>
+          </article>
+
+          <!-- Pro (featured) -->
+          <article class="pricing-card featured" aria-labelledby="tier-pro">
+            <div class="featured-badge" aria-label="Most popular plan">Most popular</div>
+            <div class="tier-name" id="tier-pro">Pro</div>
+
+            <div class="price-block">
+              <div class="price-row">
+                <span class="price-symbol" data-price-symbol="pro" aria-hidden="true">$</span>
+                <span class="price-amount" data-price-amount="pro" aria-live="polite" aria-label="Monthly price">36</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <div class="price-annual-note" data-price-note="pro" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <p class="tier-desc">For growing teams that need production-grade reliability and collaboration.</p>
+            <div class="pricing-divider" aria-hidden="true"></div>
+
+            <ul class="feature-list" aria-label="Pro plan features">
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Unlimited pipelines
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                10M records/month
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                200+ connectors
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Priority support
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Team collaboration
+              </li>
+            </ul>
+
+            <a href="#" class="btn pricing-cta" aria-label="Start free trial of Pro plan">Start free trial</a>
+          </article>
+
+          <!-- Enterprise -->
+          <article class="pricing-card" aria-labelledby="tier-enterprise">
+            <div class="tier-name" id="tier-enterprise">Enterprise</div>
+
+            <div class="price-block">
+              <div class="price-row">
+                <span class="price-symbol" data-price-symbol="enterprise" aria-hidden="true">$</span>
+                <span class="price-amount" data-price-amount="enterprise" aria-live="polite" aria-label="Monthly price">99</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <div class="price-annual-note" data-price-note="enterprise" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <p class="tier-desc">For large organisations needing compliance, SSO, and dedicated infrastructure.</p>
+            <div class="pricing-divider" aria-hidden="true"></div>
+
+            <ul class="feature-list" aria-label="Enterprise plan features">
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Unlimited everything
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                Dedicated infrastructure
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                SSO + SAML
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                SOC 2 + HIPAA
+              </li>
+              <li class="feature-item">
+                <span class="feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>
+                24/7 dedicated support
+              </li>
+            </ul>
+
+            <a href="#" class="btn pricing-cta" aria-label="Contact sales for Enterprise plan">Contact sales</a>
+          </article>
+
+        </div><!-- /pricing-grid -->
+      </div><!-- /container -->
+    </section>
+
+
+    <!-- ────────────────────────────────────
+         SOCIAL PROOF
+         ──────────────────────────────────── -->
+    <section id="social-proof" aria-labelledby="testimonials-heading">
+      <div class="container">
+
+        <header class="reveal" style="margin-bottom:3rem;">
+          <p class="eyebrow">Customer stories</p>
+          <h2 id="testimonials-heading" class="section-heading">
+            Teams shipping faster<br><span>with NeuralFlow.</span>
+          </h2>
+        </header>
+
+        <div class="testimonials-grid reveal">
+
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">We replaced three separate ETL tools with NeuralFlow. Our pipeline build time went from three weeks to a single afternoon.</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SR</div>
+              <div>
+                <div class="author-name">Sarah Rashid</div>
+                <cite class="author-role">Head of Data Engineering · Stripe</cite>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card featured-testimonial">
+            <p class="testimonial-text">The AI orchestration is genuinely magic. I described what I needed in plain English and had a production pipeline running in 20 minutes.</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar accent" aria-hidden="true">MK</div>
+              <div>
+                <div class="author-name">Marcus Kim</div>
+                <cite class="author-role">CTO · Linear</cite>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">Real-time sync across our entire warehouse used to require a dedicated team. Now two engineers handle it and have time to spare.</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AP</div>
+              <div>
+                <div class="author-name">Anika Patel</div>
+                <cite class="author-role">VP Engineering · Notion</cite>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ────────────────────────────────────
+         CTA SECTION
+         ──────────────────────────────────── -->
+    <section id="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Get started today</p>
+          <h2 id="cta-heading" class="section-heading">
+            Ready to automate your<br><span>data stack?</span>
+          </h2>
+          <div class="cta-actions">
+            <a href="#pricing" class="btn btn-primary">
+              Start for free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#pricing" class="btn btn-outline">Talk to sales</a>
+          </div>
+          <p class="cta-subtext">No credit card required · Free for up to 5 pipelines · Cancel anytime</p>
+        </div>
+      </div>
+    </section>
+<section id="how-it-works" aria-labelledby="how-heading" class="reveal">
+  <div class="container">
+    <header class="section-header" style="margin-bottom: 4rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <p class="eyebrow" style="color: var(--accent-glow, #ffb000); font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Workflow Lifecycle</p>
+      <h2 id="how-heading" class="section-heading" style="font-family: 'Inter', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--text-primary);">Deploy pipelines in three steps</h2>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle, rgba(255,255,255,0.08)); padding: 2.5rem; border-radius: 12px;">
+        <div style="font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.15); font-size: 3rem; font-weight: 700; line-height: 1; margin-bottom: 1rem;">01</div>
+        <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">Connect Sources</h3>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.937rem; color: var(--text-secondary, #a1a1aa); line-height: 1.6;">Link your data warehouses, databases, or APIs via single-click OAuth authentication with structural drift safety.</p>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle, rgba(255,255,255,0.08)); padding: 2.5rem; border-radius: 12px;">
+        <div style="font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.15); font-size: 3rem; font-weight: 700; line-height: 1; margin-bottom: 1rem;">02</div>
+        <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">Prompt Optimization</h3>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.937rem; color: var(--text-secondary, #a1a1aa); line-height: 1.6;">Describe your custom data transformation goals in plain English. The underlying AI compiles your logic safely to optimized SQL.</p>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle, rgba(255,255,255,0.08)); padding: 2.5rem; border-radius: 12px;">
+        <div style="font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.15); font-size: 3rem; font-weight: 700; line-height: 1; margin-bottom: 1rem;">03</div>
+        <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">Deploy & Scale</h3>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.937rem; color: var(--text-secondary, #a1a1aa); line-height: 1.6;">Stream metrics instantly at sub-12ms processing configurations while isolated nodes intercept runtime exceptions automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="faq-metrics" aria-labelledby="faq-heading" class="reveal">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start;">
+      <div>
+        <p class="eyebrow" style="color: var(--accent-glow, #ffb000); font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Deep Architecture</p>
+        <h2 id="faq-heading" class="section-heading" style="font-family: 'Inter', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.5rem;">Technical Framework Specifications</h2>
+        <p class="section-subtext" style="color: var(--text-secondary, #a1a1aa); max-width: 500px; font-size: 1rem;">Everything you need to verify regarding real-time isolation boundaries, ingestion performance caps, and enterprise hosting environments.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="border-bottom: 1px solid var(--border-subtle, rgba(255,255,255,0.08)); padding-bottom: 1.5rem;">
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">What is the sub-12ms latency mechanism?</h4>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.937rem; color: var(--text-secondary, #a1a1aa); line-height: 1.6;">NeuralFlow passes raw ingestion matrices through dedicated, edge-optimized execution layers. This skips the cold-start overheads common in legacy serverless networks.</p>
+        </div>
+
+        <div style="border-bottom: 1px solid var(--border-subtle, rgba(255,255,255,0.08)); padding-bottom: 1.5rem;">
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">How is schema drift managed automatically?</h4>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.937rem; color: var(--text-secondary, #a1a1aa); line-height: 1.6;">Our real-time observation structures scan mutations in column formats natively. When an external change occurs, the AI system rewrites downstream operations dynamically without taking pipelines offline.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main><!-- /main -->
+
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="" class="nav-logo" style="font-size:1rem;" aria-label="NeuralFlow home">
+          <span class="nav-logo-dot" aria-hidden="true"></span>
+          NeuralFlow
+        </a>
+        <p class="footer-copy">© 2026 NeuralFlow Inc. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Status</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ── Scripts (deferred — never block TTI) ── -->
+  <script src="js/animations.js"      defer></script>
+  <script src="js/pricing.js"         defer></script>
+  <script src="js/bento-accordion.js" defer></script>
+<button id="back-to-top" class="back-to-top" aria-label="Scroll back to top" title="Go to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+</button>
+</body>
+</html>
