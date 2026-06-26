@@ -1,0 +1,97 @@
+/* ══════════════════════════════════════════
+   DARK/LIGHT MODE ADDON — theme transition
+   ══════════════════════════════════════════ */
+
+/* Smooth transition when theme switches */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode overrides for borders/shadows */
+[data-theme="light"] .hero-card,
+[data-theme="light"] .bento-card,
+[data-theme="light"] .pricing-card,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .accordion-item {
+  box-shadow: 0 2px 16px rgba(17,76,90,0.07);
+}
+
+[data-theme="light"] .hero-card::before {
+  background: linear-gradient(90deg, transparent, rgba(17,76,90,0.4), rgba(255,152,50,0.5), transparent);
+}
+
+[data-theme="light"] .chart-bar {
+  background: linear-gradient(180deg, rgba(17,76,90,0.25) 0%, rgba(17,76,90,0.08) 100%);
+  border-color: rgba(17,76,90,0.2);
+}
+
+[data-theme="light"] .metric {
+  background: rgba(17,76,90,0.03);
+}
+
+[data-theme="light"] .badge-dot {
+  box-shadow: 0 0 6px rgba(255,200,1,0.6);
+}
+
+/* Mobile nav in light mode */
+[data-theme="light"] .mobile-nav {
+  background: var(--bg-primary);
+}
+
+/* Logo strip in light mode */
+[data-theme="light"] .logo-item {
+  color: var(--nocturnal);
+  opacity: 0.35;
+}
+[data-theme="light"] .logo-item:hover { opacity: 0.7; }
+
+/* CTA section in light mode */
+[data-theme="light"] #cta-section {
+  background: linear-gradient(135deg, rgba(17,76,90,0.06) 0%, rgba(255,200,1,0.04) 100%);
+}
+
+/* Footer in light mode */
+[data-theme="light"] footer[role="contentinfo"] {
+  background: var(--bg-secondary);
+  border-top-color: rgba(17,76,90,0.1);
+}
+
+/* Nav active link indicator */
+.nav-links a[aria-current="page"] {
+  color: var(--text-primary);
+}
+.nav-links a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ══════════════════════════════════════════
+   FOCUS STATES (accessibility)
+   ══════════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  background: var(--accent-primary);
+  color: var(--oceanic-noir);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-5);
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: none;
+}
