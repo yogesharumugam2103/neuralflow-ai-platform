@@ -4,7 +4,7 @@ An award-winning, exceptionally responsive, premium AI-Driven Data Automation Pl
 
 ## 🔗 Submission Credentials
 - **Live Production Deployment:** https://neuralflow-ai-platform.netlify.app/
-- **Public Code Repository:** [Paste your final GitHub link here]
+- **Public Code Repository:** https://github.com/yogesharumugam2103/neuralflow-ai-platform
 
 ## 🛠️ Tech Stack & Engineering Philosophy
 - **Core Architecture:** Semantic HTML5, Modular Architecture Vanilla CSS3, and Native ES6+ JavaScript.
